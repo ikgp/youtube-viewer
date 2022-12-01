@@ -8,8 +8,6 @@ add_definitions(-Wall)
 
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
-find_package(Qt5Svg REQUIRED)
-find_package(Qt5Network REQUIRED)
 find_package(Qt5WebEngine REQUIRED)
 find_package(Qt5WebEngineWidgets REQUIRED)
 
@@ -21,4 +19,4 @@ set(SRCS
 QT5_ADD_RESOURCES(RSCS kant-loader.qrc)
 
 add_executable(kant-loader ${SRCS} ${RSCS} ${MOCS})
-target_link_libraries(kant-loader Qt5::Core Qt5::Gui Qt5::Svg Qt5::Network Qt5::WebEngine Qt5::WebEngineWidgets)
+target_link_libraries(kant-loader Qt5::Core Qt5::Gui Qt5::WebEngine Qt5::WebEngineWidgets)
