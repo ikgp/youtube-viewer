@@ -37,11 +37,11 @@ jobs:
       if: runner.os == 'Windows'
       with:
         name: kant-loader.exe
-        path: kant-loader.exe
+        path: build/kant-loader.exe
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3
       if: runner.os == 'Linux'
       with:
         name: kant-loader
-        path: kant-loader
+        path: build/kant-loader
