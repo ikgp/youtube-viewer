@@ -30,14 +30,14 @@ jobs:
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3
-      if: matrix.os == "windows-latest"
+      if: runner.os == 'Windows'
       with:
         name: kant-loader.exe
         path: kant-loader.exe
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3
-      if: matrix.os == "ubuntu-latest"
+      if: runner.os == 'Linux'
       with:
         name: kant-loader
         path: kant-loader
