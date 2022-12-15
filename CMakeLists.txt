@@ -18,5 +18,12 @@ set(SRCS
 
 QT5_ADD_RESOURCES(RSCS kant-loader.qrc)
 
+# Static builds on Windows
+if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+	set(Qt5_USE_STATIC_LIBS ON)
+	set(Qt5_USE_STATIC_RUNTIME ON)
+    set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+endif ()
+
 add_executable(kant-loader ${SRCS} ${RSCS} ${MOCS})
 target_link_libraries(kant-loader Qt5::Core Qt5::Gui Qt5::WebEngine Qt5::WebEngineWidgets)
