@@ -1,3 +1,3 @@
-# Kant loader
+# YouTube viewer
 
-A simple pre-init screen for the Kant Infoscreen OS.
+Umgeht die MNS+-Sperre für Youtube.
