@@ -16,13 +16,8 @@ public:
 
     void init();
 
-public slots:
-    void ShowMainUI(bool ok);
-
 private:
-    QWebEngineView *m_loadingView;
-    QWebEngineView *m_realView;
-    QStackedWidget *m_stackedWidget;
+    QWebEngineView *m_webview;
 };
 
 QT_END_NAMESPACE
