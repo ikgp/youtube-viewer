@@ -25,7 +25,6 @@ jobs:
         modules: qtwebengine
         setup-python: false
         cache: true
-        version: 6.4.*
 
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
