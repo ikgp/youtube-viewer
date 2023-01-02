@@ -1,13 +1,13 @@
 #pragma once
 
-#include <QWidget>
+#include <QWindow>
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QWebEngineView>
 
 QT_BEGIN_NAMESPACE
 
-class Window : public QWidget
+class Window : public QWindow
 {
 Q_OBJECT
 
