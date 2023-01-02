@@ -1,12 +1,12 @@
 #include "window.h"
 
-#include <QWindow>
+#include <QWidget>
 #include <QWebEngineView>
 #include <QVBoxLayout>
 #include <QStackedWidget>
 
 Window::Window()
-	:QWindow()
+	:QWidget()
 {
 }
 
@@ -19,5 +19,5 @@ void Window::init() {
     layout->setMargin(0);
     layout->addWidget(webView);
     setLayout(layout);
-    this->setTitle(QString("YouTube"));
+    this->setWindowTitle(QString("YouTube"));
 }

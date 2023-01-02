@@ -7,7 +7,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Window : public QWindow
+class Window : public QWidget
 {
 Q_OBJECT
 
