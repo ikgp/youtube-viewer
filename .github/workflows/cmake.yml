@@ -32,16 +32,20 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-    - name: Upload a Build Artifact
+    - name: Add Windows dependencies
+      if: runner.os == 'Windows'
+      run: windeployqt build/Release/kant-loader.exe
+
+    - name: Upload the Windows build
       uses: actions/upload-artifact@v3
       if: runner.os == 'Windows'
       with:
         name: kant-loader-Windows
         path: build/Release
 
-    - name: Upload a Build Artifact
+    - name: Upload the Linux build
       uses: actions/upload-artifact@v3
       if: runner.os == 'Linux'
       with:
-        name: kant-loader
+        name: kant-loader-ubuntu
         path: build/kant-loader
