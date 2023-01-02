@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QNetworkProxyFactory::setUseSystemConfiguration(false);
     QApplication app(argc, argv);
     Window window;
-    window.setWindowState(Qt::WindowFullScreen);
+    window.setWindowState(Qt::WindowMaximized | Qt::WindowActive);
     window.show();
     window.init();
 
