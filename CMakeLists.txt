@@ -24,9 +24,3 @@ endif ()
 
 add_executable(kant-loader ${SRCS} ${RSCS} ${MOCS})
 target_link_libraries(kant-loader Qt5::Core Qt5::Gui Qt5::WebEngine Qt5::WebEngineWidgets)
-qt_generate_deploy_app_script(
-    TARGET kant-loader
-    FILENAME_VARIABLE deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-add_custom_command(TARGET kant-loader POST_BUILD COMMAND ${deploy_script})
