@@ -17,7 +17,7 @@ public:
     void init();
 
 private:
-    QWebEngineView *m_webview;
+    QWebEngineView *m_webView;
 };
 
 QT_END_NAMESPACE
