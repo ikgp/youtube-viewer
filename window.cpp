@@ -19,4 +19,5 @@ void Window::init() {
     layout->setMargin(0);
     layout->addWidget(webView);
     setLayout(layout);
+    this->setTitle(QString("Youtube"));
 }
